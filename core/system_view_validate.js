@@ -24,7 +24,7 @@ exports.validatePasswordSpec = validatePasswordSpec;
 const emptyFieldError = () => new Error('Field cannot be empty');
 
 function validateNonEmpty(data, cb) {
-    return cb(data && data.length > 0 ? null : emptyFieldError);
+    return cb(data && data.length > 0 ? null : emptyFieldError());
 }
 
 function validateMessageSubject(data, cb) {
